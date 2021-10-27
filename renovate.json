@@ -1,0 +1,29 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":enablePreCommit",
+    ":rebaseStalePrs",
+    ":semanticCommits",
+    ":semanticCommitScope(deps)",
+    ":semanticCommitTypeAll(ci)",
+    ":pinVersions"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "psf/black"
+      ],
+      "matchManagers": [
+        "pre-commit"
+      ],
+      "versioning": "pep440"
+    },
+    {
+      "matchPackageNames": [
+        "black",
+        "psf/black"
+      ],
+      "ignoreUnstable": false
+    }
+  ]
+}
