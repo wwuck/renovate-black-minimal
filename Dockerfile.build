@@ -18,7 +18,7 @@ ARG PACKAGING_VERSION="21.0"
 # renovate: datasource=pypi depName=wheel versioning=pep440
 ARG WHEEL_VERSION="0.37.0"
 # renovate: datasource=pypi depName=twine versioning=pep440
-ARG TWINE_VERSION="3.4.2"
+ARG TWINE_VERSION="3.6.0"
 # renovate: datasource=pypi depName=cython versioning=pep440
 ARG CYTHON_VERSION="0.29.24"
 # renovate: datasource=pypi depName=numpy versioning=pep440
