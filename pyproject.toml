@@ -1,0 +1,13 @@
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+
+[tool.isort]
+line_length = 120
+profile = 'black'
+
+[tool.mypy]
+show_error_codes = true
+disallow_any_decorated = true
+disallow_any_explicit = true
+warn_unreachable = true

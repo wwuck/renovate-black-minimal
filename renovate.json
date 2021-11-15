@@ -1,6 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
+    "docker:enableMajor",
+    "docker:pinDigests",
+    "regexManagers:dockerfileVersions",
     ":enablePreCommit",
     ":rebaseStalePrs",
     ":semanticCommits",
@@ -24,6 +27,30 @@
         "psf/black"
       ],
       "ignoreUnstable": false
+    }
+  ],
+  "regexManagers": [
+    {
+      "datasourceTemplate": "pypi",
+      "description": "Find any python dependecy within tox.ini, .pre-commit-config.yaml, or noxfile.py file. Anything with '==' is assumed to be a python dependency. Section in square brackets is ignored.",
+      "fileMatch": [
+        "^tox\\.ini$",
+        "^\\.pre-commit-config\\.yaml$",
+        "^noxfile\\.py$"
+      ],
+      "matchStrings": [
+        "\\s*'?((?<depName>[^\\s]*?)(\\[.*\\])?(?<currentValue>==.*?)'?,?\\s)"
+      ]
+    },
+    {
+      "datasourceTemplate": "docker",
+      "description": "Used to find docker sha256 digest dependencies in docker files.",
+      "fileMatch": [
+        "^Dockerfile\\.?.*$"
+      ],
+      "matchStrings": [
+        "ARG IMAGE=(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)s"
+      ]
     }
   ]
 }
