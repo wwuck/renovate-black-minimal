@@ -14,7 +14,7 @@ ARG NOX_VERSION="2021.6.12"
 # renovate: datasource=pypi depName=dunamai versioning=pep440
 ARG DUNAMAI_VERSION="1.6.0"
 # renovate: datasource=pypi depName=packaging versioning=pep440
-ARG PACKAGING_VERSION="21.0"
+ARG PACKAGING_VERSION="21.2"
 # renovate: datasource=pypi depName=wheel versioning=pep440
 ARG WHEEL_VERSION="0.37.0"
 # renovate: datasource=pypi depName=twine versioning=pep440
