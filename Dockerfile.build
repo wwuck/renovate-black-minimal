@@ -12,7 +12,7 @@ ARG APT_DEPS="gfortran g++ libblas-dev liblapack-dev libboost-dev libpq-dev git 
 # renovate: datasource=pypi depName=nox versioning=pep440
 ARG NOX_VERSION="2021.6.12"
 # renovate: datasource=pypi depName=dunamai versioning=pep440
-ARG DUNAMAI_VERSION="1.6.0"
+ARG DUNAMAI_VERSION="1.7.0"
 # renovate: datasource=pypi depName=packaging versioning=pep440
 ARG PACKAGING_VERSION="21.0"
 # renovate: datasource=pypi depName=wheel versioning=pep440
