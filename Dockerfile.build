@@ -10,7 +10,7 @@ ARG APT_BUILD_DEPS="curl"
 ARG APT_DEPS="gfortran g++ libblas-dev liblapack-dev libboost-dev libpq-dev git make cmake openssl procps openssh-client jq"
 
 # renovate: datasource=pypi depName=nox versioning=pep440
-ARG NOX_VERSION="2021.6.12"
+ARG NOX_VERSION="2021.10.1"
 # renovate: datasource=pypi depName=dunamai versioning=pep440
 ARG DUNAMAI_VERSION="1.6.0"
 # renovate: datasource=pypi depName=packaging versioning=pep440
